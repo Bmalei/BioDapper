@@ -12,13 +12,13 @@ namespace MyFirstDapper.Model
     public class SubjectModel
     {
         [Key]
-        [Column("Id")]
+        [Column("SubjectId")]
         public int Id { get; set; }
 
-        [Column("Id")]
-        public string FirstName { get; set; }
+        [Column("Subject")]
+        public string Subject { get; set; }
 
-        [Column("Id")]
-        public string LastName { get; set; }
+        [Column("Description")]
+        public string Description { get; set; }
     }
 }

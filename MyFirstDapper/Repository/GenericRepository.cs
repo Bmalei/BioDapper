@@ -12,9 +12,11 @@ using System.Threading.Tasks;
 
 namespace MyFirstDapper.Repository
 {
+     //(class) for performing crud, which implements IGenericRepository interface
     public class GenericRepository<T>: IGenericRepository<T> where T : class
 
     {
+         //to interact with the database
         IDbConnection connection;
         private object p;
         private object _connection;
@@ -34,27 +36,26 @@ namespace MyFirstDapper.Repository
             throw new NotImplementedException();
         }
 
-       
 
-        public bool Add(T entity)
+
+        public bool Add(T Entity)
         {
             string tableName = GetTableName();
             string columns = GetColumnNames();
             string values = GetColumnValues();
-            string query = $"INSERT INTO {tableName} {columns}) VALUES ({values}) ";
+            string query = $"INSERT INTO {tableName} ({columns}) VALUES ({values}) ";
 
             int affectedRow = 0;
-            affectedRow = connection.Execute(query, entity);
+            affectedRow = connection.Execute(query, Entity);
 
             return affectedRow == 1;
+
         }
 
-        public string GetTableName()
-        {
-            throw new NotImplementedException();
-        }
+        
+       
 
-        public bool Update(T entity)
+        public bool Update(T Entity)
         {
             throw new NotImplementedException();
         }
@@ -64,20 +65,20 @@ namespace MyFirstDapper.Repository
             throw new NotImplementedException();
         }
 
-        public string GetTableName(int id)
+        public string GetTableName()
         {
             string tableName = "";
             var type = typeof(T);
             var tableAttr = type.GetCustomAttribute<TableAttribute>();
             if (tableAttr != null)
             {
-                tableName = tableAttr.Name;
+                tableName = $"[{tableAttr.Name}]";
             }
 
             return tableName;
         }
 
-        public string GetColumnNames(bool excludeKey = false)
+        public string GetColumnNames(bool excludeKey = true)
         {
             string columnNames = "";
             var type = typeof(T);
@@ -91,7 +92,7 @@ namespace MyFirstDapper.Repository
             return columns;
         }
 
-        public string GetColumnValues(bool excludeKey = false)
+        public string GetColumnValues(bool excludeKey = true)
         {
             var columnValues = typeof(T).GetProperties()
             .Where(p => !excludeKey || p.GetCustomAttribute<KeyAttribute>() == null);

@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace MyFirstDapper.Repository
 {
-    public class InstructorRepository : GenericRepository<InstructorModel>
+    public class SubjectRepository : GenericRepository<SubjectModel>
     {
-        public bool AddInstructor(InstructorModel instructor)
+        public bool AddSubject(SubjectModel subject)
         {
             throw new NotImplementedException();
         }
 
-        public InstructorModel GetInstructorbyId(int id)
+        public SubjectModel GetSubjectbyId(int id)
         {
             throw new NotImplementedException();
         }

@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace MyFirstDapper.Services
 {
+     //provides method for performing crud
     public class StudentServices
     {
-        StudentRepository studentRepository;
+        StudentRepository studentRepository = new StudentRepository();
 
         
         public StudentModel GetStudentById(int id)

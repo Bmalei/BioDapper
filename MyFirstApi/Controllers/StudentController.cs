@@ -5,6 +5,7 @@ using MyFirstDapper.Model;
 
 namespace MyFirstApi.Controllers
 {
+    //common attributes for controller
     [Route("api/[controller]")]
     [ApiController]
     public class StudentController : ControllerBase

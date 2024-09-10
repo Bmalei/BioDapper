@@ -12,7 +12,7 @@ namespace MyFirstDapper.Model
     public class EnrollmentModel
     {
         [Key]
-        [Column("Id")]
+        [Column("EnrollmentId")]
         public int Id { get; set; }
 
         [Column("Status")]
