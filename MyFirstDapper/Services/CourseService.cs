@@ -14,15 +14,23 @@ namespace MyFirstDapper.Services
 
         public CourseModel GetCourseById(int id)
         {
-            courseRepository = new CourseRepository();
+
             return courseRepository.GetbyId(id);
         }
 
         public bool AddCourse(CourseModel course)
         {
-            courseRepository = new CourseRepository();
-
             return courseRepository.Add(course);
+        }
+
+        public bool UpdateCourse(CourseModel course) 
+        { 
+            return courseRepository.Update(course);
+        }
+
+        public bool DeleteCourse(CourseModel course)
+        {
+            return courseRepository.Delete(course);
         }
     }
 }

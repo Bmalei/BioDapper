@@ -24,5 +24,19 @@ namespace MyFirstDapper.Services
 
             return enrollmentRepository.Add(enrollment);
         }
+
+        public bool UpdateEnrollment(EnrollmentModel enrollment)
+        {
+            enrollmentRepository = new EnrollmentRepository();
+
+            return enrollmentRepository.Update(enrollment);
+        }
+
+        public bool DeleteEnrollment(EnrollmentModel enrollment)
+        {
+            enrollmentRepository = new EnrollmentRepository();
+
+            return enrollmentRepository.Delete(enrollment);
+        }
     }
 }

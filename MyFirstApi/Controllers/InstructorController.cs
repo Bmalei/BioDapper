@@ -9,12 +9,27 @@ namespace MyFirstApi.Controllers
     [ApiController]
      public class InstructorController : ControllerBase
     {
+        InstructorService instructorServices = new InstructorService();
         [HttpPost]
 
         public bool AddInstructor(InstructorModel instructor)
         {
-            InstructorService instructorServices = new InstructorService();
             return instructorServices.AddInstructor(instructor);
         }
+
+        [HttpPut]
+
+        public bool UpdateInstructor(InstructorModel instructor)
+        {
+            return instructorServices.UpdateInstructor(instructor);
+        }
+
+        [HttpDelete]
+
+        public bool DeleteInstructor(InstructorModel instructor)
+        {
+            return instructorServices.DeleteInstructor(instructor);
+        }
+
     }
 }

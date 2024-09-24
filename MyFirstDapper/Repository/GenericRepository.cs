@@ -9,6 +9,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using static Dapper.SqlMapper;
 
 namespace MyFirstDapper.Repository
 {
@@ -41,8 +42,8 @@ namespace MyFirstDapper.Repository
         public bool Add(T Entity)
         {
             string tableName = GetTableName();
-            string columns = GetColumnNames();
-            string values = GetColumnValues();
+            string columns = GetColumnNames(true);
+            string values = GetColumnValues(true);
             string query = $"INSERT INTO {tableName} ({columns}) VALUES ({values}) ";
 
             int affectedRow = 0;
@@ -53,16 +54,32 @@ namespace MyFirstDapper.Repository
         }
 
         
-       
+
 
         public bool Update(T Entity)
         {
-            throw new NotImplementedException();
+            string tableName = GetTableName();
+            string columns = GetColumnNames(true);
+            string values = GetColumnValues(true);
+            string query = $"INSERT INTO {tableName} ({columns}) VALUES ({values}) ";
+
+            int affectedRow = 0;
+            affectedRow = connection.Execute(query, Entity);
+
+            return affectedRow == 1;
         }
 
-        public bool Delete(int id)
+        public bool Delete(T Entity)
         {
-            throw new NotImplementedException();
+            string tableName = GetTableName();
+            string columns = GetColumnNames(true);
+            string values = GetColumnValues(true);
+            string query = $"INSERT INTO {tableName} ({columns}) VALUES ({values}) ";
+
+            int affectedRow = 0;
+            affectedRow = connection.Execute(query, Entity);
+
+            return affectedRow == 1;
         }
 
         public string GetTableName()

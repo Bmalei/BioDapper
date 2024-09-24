@@ -10,12 +10,25 @@ namespace MyFirstApi.Controllers
     [ApiController]
     public class CourseController : ControllerBase
     {
+        CourseService courseServices = new CourseService();
+        
         [HttpPost]
-
         public bool AddCourse(CourseModel course)
-        {
-            CourseService courseServices = new CourseService();
+        { 
+            
             return courseServices.AddCourse(course);
+        }
+
+        [HttpPut]
+        public bool UpdateCourse(CourseModel course) 
+        {
+            return courseServices.UpdateCourse(course);
+        }
+
+        [HttpDelete]
+        public bool DeleteCourse(CourseModel course) 
+        {
+            return courseServices.DeleteCourse(course);
         }
     }
 }

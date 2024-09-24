@@ -9,12 +9,24 @@ namespace MyFirstApi.Controllers
     [ApiController]
     public class EnrollmentController : ControllerBase
     {
+        EnrollmentService enrollmentServices = new EnrollmentService();
         [HttpPost]
 
         public bool AddEnrollment(EnrollmentModel enrollment)
         {
-            EnrollmentService enrollmentServices = new EnrollmentService();
             return enrollmentServices.AddEnrollment(enrollment);
+        }
+
+        [HttpPut]
+        public bool UpdateEnrollment(EnrollmentModel enrollment)
+        {
+            return enrollmentServices.UpdateEnrollment(enrollment);
+        }
+
+        [HttpDelete]
+        public bool DeleteEnrollment(EnrollmentModel enrollment)
+        {
+            return enrollmentServices.DeleteEnrollment(enrollment);
         }
     }
 }

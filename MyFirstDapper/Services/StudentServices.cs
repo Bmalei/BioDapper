@@ -15,27 +15,24 @@ namespace MyFirstDapper.Services
 
         
         public StudentModel GetStudentById(int id)
-        {
-            studentRepository = new StudentRepository();
+        {           
             return studentRepository.GetbyId(id);
         }
 
         public bool AddStudent(StudentModel student)
-        {
-            studentRepository = new StudentRepository();
-
+        {         
             return studentRepository.Add(student);
         }
 
+        public bool UpdateStudent(StudentModel student)
+        {           
+            return studentRepository.Update(student);
+        }
 
-        //public static bool AddStudent(object student)           
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public bool DeleteStudent(StudentModel student)
+        {
+            return studentRepository.Delete(student);
+        }
 
-        //public static bool AddStudent(global::MyFirstApi.Controllers.StudentModel student)
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

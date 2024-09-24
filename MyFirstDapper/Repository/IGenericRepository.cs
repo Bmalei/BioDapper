@@ -15,7 +15,7 @@ namespace MyFirstDapper.Repository
 
         bool Update( T entity );
 
-        bool Delete( int id );
+        bool Delete( T entity );
         string GetColumnValues(bool excludeKey = true);
     }
 }

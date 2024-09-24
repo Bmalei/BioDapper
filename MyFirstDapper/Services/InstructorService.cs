@@ -14,16 +14,23 @@ namespace MyFirstDapper.Services
 
 
         public InstructorModel GetInstructorById(int id)
-        {
-            instructorRepository = new InstructorRepository();
+        {           ;
             return instructorRepository.GetbyId(id);
         }
 
         public bool AddInstructor(InstructorModel instructor)
         {
-            instructorRepository = new InstructorRepository();
-
             return instructorRepository.Add(instructor);
+        }
+
+        public bool UpdateInstructor(InstructorModel instructor)
+        {
+            return instructorRepository.Update(instructor);
+        }
+
+        public bool DeleteInstructor(InstructorModel instructor)
+        {
+            return instructorRepository.Delete(instructor);
         }
     }
 }
