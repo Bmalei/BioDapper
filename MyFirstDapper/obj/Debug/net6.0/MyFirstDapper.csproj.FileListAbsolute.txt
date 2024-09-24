@@ -1,0 +1,13 @@
+C:\Users\student14\Desktop\BSIT - Aira Lei Bio\BioDapperProject\MyFirstDapper\MyFirstDapper\bin\Debug\net6.0\MyFirstDapper.deps.json
+C:\Users\student14\Desktop\BSIT - Aira Lei Bio\BioDapperProject\MyFirstDapper\MyFirstDapper\bin\Debug\net6.0\MyFirstDapper.dll
+C:\Users\student14\Desktop\BSIT - Aira Lei Bio\BioDapperProject\MyFirstDapper\MyFirstDapper\bin\Debug\net6.0\MyFirstDapper.pdb
+C:\Users\student14\Desktop\BSIT - Aira Lei Bio\BioDapperProject\MyFirstDapper\MyFirstDapper\obj\Debug\net6.0\MyFirstDapper.csproj.AssemblyReference.cache
+C:\Users\student14\Desktop\BSIT - Aira Lei Bio\BioDapperProject\MyFirstDapper\MyFirstDapper\obj\Debug\net6.0\MyFirstDapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\student14\Desktop\BSIT - Aira Lei Bio\BioDapperProject\MyFirstDapper\MyFirstDapper\obj\Debug\net6.0\MyFirstDapper.AssemblyInfoInputs.cache
+C:\Users\student14\Desktop\BSIT - Aira Lei Bio\BioDapperProject\MyFirstDapper\MyFirstDapper\obj\Debug\net6.0\MyFirstDapper.AssemblyInfo.cs
+C:\Users\student14\Desktop\BSIT - Aira Lei Bio\BioDapperProject\MyFirstDapper\MyFirstDapper\obj\Debug\net6.0\MyFirstDapper.csproj.CoreCompileInputs.cache
+C:\Users\student14\Desktop\BSIT - Aira Lei Bio\BioDapperProject\MyFirstDapper\MyFirstDapper\obj\Debug\net6.0\MyFirstDapper.dll
+C:\Users\student14\Desktop\BSIT - Aira Lei Bio\BioDapperProject\MyFirstDapper\MyFirstDapper\obj\Debug\net6.0\refint\MyFirstDapper.dll
+C:\Users\student14\Desktop\BSIT - Aira Lei Bio\BioDapperProject\MyFirstDapper\MyFirstDapper\obj\Debug\net6.0\MyFirstDapper.pdb
+C:\Users\student14\Desktop\BSIT - Aira Lei Bio\BioDapperProject\MyFirstDapper\MyFirstDapper\obj\Debug\net6.0\ref\MyFirstDapper.dll
+C:\Users\student14\Desktop\BSIT - Aira Lei Bio\BioDapperProject\MyFirstDapper\MyFirstDapper\obj\Debug\net6.0\MyFirstDapper.sourcelink.json
